@@ -1,0 +1,223 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #0f172a;
+}
+
+#root {
+  height: 100%;
+  background-color: #0f172a;
+}
+
+.App {
+  text-align: center;
+  background-color: #0f172a;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.game-container {
+  background-color: #f8fafc;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+}
+
+h1 {
+  color: #1e293b;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* PlayerForm Styles */
+.player-form {
+  padding: 20px;
+}
+
+.player-form h2 {
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.name-input {
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  margin-right: 10px;
+  outline: none;
+  width: 200px;
+}
+
+.name-input:focus {
+  border-color: #3b82f6;
+}
+
+.start-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #2563eb;
+}
+
+/* GameBoard Styles */
+.game-header {
+  margin-bottom: 30px;
+}
+
+.game-header h2 {
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.game-header p {
+  color: #64748b;
+  margin: 5px 0;
+}
+
+.win-message {
+  background-color: #10b981;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.win-message h2 {
+  margin: 0 0 10px 0;
+}
+
+.win-message p {
+  margin: 0;
+}
+
+.dice-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Die Styles */
+.die {
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.die:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.die.held {
+  background-color: #10b981;
+  color: white;
+  border-color: #059669;
+}
+
+.button-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.roll-btn,
+.play-again-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.roll-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.roll-btn:hover {
+  background-color: #2563eb;
+}
+
+.play-again-btn {
+  background-color: #64748b;
+  color: white;
+}
+
+.play-again-btn:hover {
+  background-color: #475569;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-container {
+    padding: 20px;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .dice-container {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+
+  .die {
+    height: 60px;
+    width: 60px;
+    font-size: 1.5rem;
+  }
+
+  .name-input {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .roll-btn,
+  .play-again-btn {
+    width: 200px;
+  }
+}
